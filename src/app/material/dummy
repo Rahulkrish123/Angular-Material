@@ -1,0 +1,31 @@
+<div class="login-container">
+    <header class="login__header"><br>
+        
+         </header>
+ <form (ngSubmit)="login()">
+ <mat-card class="matcard">
+  <h1><strong>LOGIN...</strong></h1>
+<div class="form-group p-2">
+<input type="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Enter email Id" required>
+</div>
+ <div class="form-group p-2">
+    <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Enter Password" required>
+</div>
+ <div class="form-group p-2">
+    <button class="btn btn-success" onclick="document.location='register'" style="width: 30%;" >Register</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+     <button type="submit" class="btn btn-primary" style="width: 30%;"onclick="document.location='home'">Login</button>
+</div>
+<hr>
+</mat-card>
+ </form>
+
+</div>
+<div class="form-group">
+ <p *ngIf="errorMessage.length > 0" class="text-danger">
+ {{errorMessage}}</p>
+<p *ngIf="error.message.length > 0" class="text-danger">
+      {{error.message}} </p>
+</div>
+
+  
+
